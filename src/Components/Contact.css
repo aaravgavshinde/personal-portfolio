@@ -1,0 +1,143 @@
+.contact-main-div{
+    width: 100%;
+    background-color: #14161B;
+}
+
+.contact-main-div-inner {
+    width: 50%;
+    margin: 40px auto;
+    background-color: #14161B;
+    /* margin-bottom: 0; */
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-box-inner {
+    border-radius: 10px;
+    padding: 35px 10px;
+    padding-top: 10px;
+    margin: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #25272F 0%, rgba(63, 67, 78, 0.61) 54.58%, rgba(107, 109, 117, 0.24) 87.92%);
+    transform: scale(1);
+    transition: 0.2s transform;
+    box-shadow: 1px 1px 5px #10192d;
+}
+
+.contact-box-inner:hover {
+    transform: scale(1.02);
+    filter: brightness(130%);
+}
+
+.contact-box:hover .contact-box-inner:not(:hover){
+    filter: brightness(70%);
+}
+
+.contact-head {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+.contact-content {
+    color: #F99417;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    text-align: center;
+    background: transparent;
+}
+
+.contact-content a{
+    text-decoration: none;
+    color: #F99417;
+    background: transparent;
+}
+
+.cc-2 {
+    text-transform: lowercase;
+}
+
+.hire-me {
+    text-align: center;
+    margin: 40px 10px;
+    margin-top: 60px; 
+}
+
+.hire-me-button {
+    border-radius: 30px;
+    background: #AC9EFF;
+    color: #1E1E1E;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+/* Making Responsive */
+@media screen and (min-width: 1280px) and (max-width: 1632px) {
+    .contact-main-div-inner {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 1166px) and (max-width: 1280px) {
+    .contact-main-div-inner {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1166px) {
+    .contact-main-div-inner {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 936px) and (max-width: 1000px) {
+    .contact-main-div-inner {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 722px) and (max-width: 936px) {
+    .contact-main-div-inner {
+        width: 70%;
+    }
+    .contact-box {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 722px) {
+    .contact-main-div-inner {
+        width: 80%;
+    }
+    .contact-box {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}

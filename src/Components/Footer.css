@@ -1,0 +1,202 @@
+.footer-main-div{
+    width: 100%;
+    background-color: #14161B;
+}
+
+.footer-main-div-inner {
+    border-radius: 40px 40px 0px 0px;
+    padding-top: 30px;
+    width: 80%;
+    margin: 300px auto 0px auto;
+    background-color: #0e245686;
+    padding-bottom: 20px;
+}
+
+/* Top Portion */
+
+hr {
+    width: 80%;
+    margin: auto;
+}
+
+.hr-div {
+    margin: 30px auto;
+}
+
+.back-to-top-button {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.back-to-top-button a {
+    text-decoration: none;
+    color: #f99317;
+}
+
+/* Bottom Portion */
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.quick-link-head {
+    color: #f99317;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: capitalize;
+    margin: 10px;
+}
+
+.quick-links {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 10px;
+    margin-top: 20px;
+    padding-left: 0px;
+}
+
+.quick-links li{
+    list-style: none;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.quick-links a:hover {
+    color: rgba(185, 173, 255, 0.87);
+    letter-spacing: 3px;
+}
+
+.footer-link {
+    margin-top: 2px;
+}
+
+.quick-links-box{
+    margin-left: 250px;
+}
+
+/* Loved My Work? */
+.loved-my-work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.loved-my-work h3 {
+    color: #e3e3e3;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    text-shadow: 0.4px 0.4px 30px rgb(214, 164, 255)
+}
+
+.loved-my-work button {
+    border-radius: 40px;
+    background: #F99417;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 3px 20px;
+    border: none;
+    margin: 20px 10px;
+    box-shadow: 0.3px 0.3px 8px rgba(240, 194, 9, 0.821);
+    cursor: pointer;
+}
+
+/* Footer End */
+.footer-end-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-links img{
+    width: 25px;
+    height: 25px;
+    filter: hue-rotate(50deg);
+    margin: 10px 30px;
+    opacity: 0.8;
+}
+
+.img-links img:hover{
+    filter: hue-rotate(90deg);
+}
+
+.img-links{
+    margin: 100px auto 20px auto;
+}
+
+.made-with-love{
+    color: rgb(110, 177, 232);
+    filter: hue-rotate(60deg);
+    background: transparent;
+    margin: auto;
+    opacity: 0.4;
+}
+
+/* Making Responsive */
+@media screen and (min-width: 1260px) and (max-width: 1456px) {
+    .footer-main-div-inner {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1110px) and (max-width: 1260px) {
+    .footer-main-div-inner {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 930px) and (max-width: 1110px) {
+    .footer-main-div-inner {
+        width: 100%;
+    }
+    .quick-links-box{
+        margin-left: 150px;
+    }
+    .loved-my-work{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 930px) {
+    .footer-main-div-inner {
+        width: 100%;
+    }
+    .quick-links-box{
+        margin-left: 100px;
+    }
+    .loved-my-work{
+        margin-right: 100px;
+    }
+    .loved-my-work h3 {
+        font-size: 15px;
+    }
+    .loved-my-work button {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 20px;
+        border: none;
+        margin: 20px 10px;
+        box-shadow: 0.3px 0.3px 8px rgba(240, 194, 9, 0.821);
+        cursor: pointer;
+    }
+}

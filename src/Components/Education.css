@@ -1,0 +1,22 @@
+.education-main-div{
+    width: 100%;
+}
+
+.education-main-div-inner{
+    margin: 60px auto;
+    width: 60%;
+    background-color: #14161B;
+    text-align: center;
+}
+
+.my-education{
+    width: 100%;
+    filter: contrast(83%);
+}
+
+/* Making Responsive */
+@media screen and (min-width: 0px) and (max-width: 1350px) {
+    .education-main-div-inner{
+        width: 70%;
+    }
+}

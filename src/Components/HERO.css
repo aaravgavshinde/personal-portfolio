@@ -1,0 +1,146 @@
+* {
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Outfit;
+}
+
+.hero-main-div {
+    margin: 40px auto;
+    width: 50%;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+/* Navbar */
+navbar ul li {
+    list-style: none;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    text-transform: capitalize;
+    margin: 5px auto;
+    transform: skew();
+    transition: 0.2s transform;
+}
+
+navbar ul li a:hover{
+    color: rgba(172, 158, 255, 0.87);
+}
+
+navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.link-active{
+    background: linear-gradient(to right, #ffffff, #966c6c, #9a0c0c);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    background-size: 600% auto;
+    animation: Animation-1 1.3s ease-in-out infinite alternate;
+    text-shadow: 0.1px 0.1px 20px #70f8ff;
+}
+
+navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+/* Main Hero Section */
+.hero-main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+}
+
+.my-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-image img {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    box-shadow: 0.2px 0.2px 50px rgba(79, 69, 136, 0.286);
+}
+
+.my-name {
+    display: flex;
+    margin-top: 140px;
+}
+
+.my-name h3 {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.25px;
+    text-transform: capitalize;
+}
+
+.my-name h4{
+    color: rgba(172, 158, 255, 0.87);
+    font-family: Outfit;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.75px;
+    text-transform: capitalize;
+}
+
+/* Little About Me */
+.little-about-me {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin: 30px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.little-about-me span:hover{
+    color: rgba(172, 158, 255, 0.87);
+}
+
+/* Scroll Down Text  */
+.scroll-down-text {
+    color: rgb(61, 65, 75);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin: 200px 20px;
+    text-align: center;
+}
+
+/* Making Responsive */
+@media screen and (min-width: 1480px) and (max-width: 1750px) {
+    .hero-main-div {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1480px) {
+    .hero-main-div {
+        width: 70%;
+    }
+}

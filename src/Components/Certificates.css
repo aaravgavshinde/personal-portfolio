@@ -1,0 +1,221 @@
+.certificates-main-div {
+    width: 100%;
+}
+
+.certificates-main-div-inner {
+    width: 50%;
+    margin: 40px auto;
+}
+
+.certi-img img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.1s transform;
+}
+
+.certi-img img:hover {
+    transform: scale(1.03);
+}
+
+.loc-img {
+    text-align: center;
+}
+
+.loc-img img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.1s transform;
+}
+
+.loc-img img:hover {
+    transform: scale(1.03);
+}
+
+.certificate-box {
+    border: none;
+    border-radius: 10px;
+    background: #191E2D;
+    padding: 10px;
+    margin: 80px 10px;
+}
+
+/* Web Dev */
+.web-dev-1 {
+    text-align: center;
+    margin: 30px 10px;
+}
+
+.web-dev-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 20px 10px;
+}
+
+/* React.js */
+.react-1 {
+    text-align: center;
+    margin: 30px 10px;
+}
+
+.react-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 20px 10px;
+}
+
+.react-details {
+    margin-left: 100px;
+}
+
+/* Back End */
+.backend-1 {
+    text-align: center;
+    margin: 30px 10px;
+}
+
+.backend-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 20px 10px;
+}
+
+/* AI */
+.ai {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.ai-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 10px;
+}
+
+.ai-img div {
+    margin: 30px 10px;
+}
+
+/* Making Responsive */
+@media screen and (min-width: 1339px) and (max-width: 1600px) {
+    .certificates-main-div-inner {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1137px) and (max-width: 1339px) {
+    .certificates-main-div-inner {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1113px) and (max-width: 1137px) {
+    .certificates-main-div-inner {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 988px) and (max-width: 1113px) {
+    .certificates-main-div-inner {
+        width: 70%;
+    }
+    .web-dev-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .web-dev-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+    .certi-img img{
+        width: 70%;
+        height: auto;      
+    }
+    .react-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .react-details {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .backend-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .backend-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 822px) and (max-width: 988px) {
+    .certificates-main-div-inner {
+        width: 80%;
+    }
+    .web-dev-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .web-dev-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+    .certi-img img{
+        width: 70%;
+        height: auto;      
+    }
+    .react-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .react-details {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .backend-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .backend-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 822px) {
+    .certificates-main-div-inner {
+        width: 90%;
+    }
+    .web-dev-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .web-dev-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+    .certi-img img{
+        width: 70%;
+        height: auto;      
+    }
+    .react-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .react-details {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .backend-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .backend-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+}
