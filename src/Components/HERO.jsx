@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from "react";
 import './HERO.css'
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import 'react-typed/dist/animatedCursor.css';
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 export default function HERO() {
 
@@ -11,8 +11,7 @@ export default function HERO() {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Full Stack Developer", "Web Designer", "Video Editor", "Photographer"], // Strings to display
-            // Speed settings, try diffrent values untill you get good results
+            strings: ["Full Stack Developer", "Web Designer", "Video Editor", "Photographer"],
             startDelay: 300,
             typeSpeed: 60,
             backSpeed: 30,
@@ -26,21 +25,29 @@ export default function HERO() {
         };
     }, []);
 
+    const [showMediaIcons, setShowMediaIcons] = useState(false);
+
     return (
         <div className='hero-main-div'>
-            <navbar>
-                <ul>
-                    <li><a href=''>More About Me</a></li>
-                    <li><a href=''>Skills</a></li>
-                    <li><a href=''>Projects</a></li>
-                    <li><a href=''>Resume</a></li>
-                    <li><a href=''>Contact</a></li>
-                    <li><a href=''>Certificates</a></li>
-                    <li><a href=''>Education</a></li>
-                    <li><a href=''>Extra-Curricular</a></li>
-                </ul>
+            <div className="hamburger-button">
+                <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+                    <i className="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+            <nav className="main-nav">
+                <div className={showMediaIcons ? "nav-link mobile-nav-link" : "nav-link"}>
+                    <ul>
+                        <li><a href=''>More About Me</a></li>
+                        <li><a href=''>Skills</a></li>
+                        <li><a href=''>Projects</a></li>
+                        <li><a href=''>Resume</a></li>
+                        <li><a href=''>Contact</a></li>
+                        <li><a href=''>Certificates</a></li>
+                        <li><a href=''>Education</a></li>
+                        <li><a href=''>Extra-Curricular</a></li>
+                    </ul>
 
-                {/* <ul>
+                    {/* <ul>
                     <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>More About Me</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Skills</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Projects</NavLink></li>
@@ -50,7 +57,8 @@ export default function HERO() {
                     <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Education</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Extra-Curricular</NavLink></li>
                 </ul> */}
-            </navbar >
+                </div>
+            </nav >
 
             {/* < Navbar expand = "lg" className = "bg-body-transparent .text-white" >
             <Container>

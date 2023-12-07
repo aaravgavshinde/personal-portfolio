@@ -13,11 +13,20 @@
     padding-top: 50px;
 }
 
-/* Navbar */
-navbar ul li {
+/* .nav-link */
+.nav-link {
+    display: grid;
+}
+
+.nav-link ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-link ul li {
     list-style: none;
     color: #FFF;
-    font-family: Outfit;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -25,20 +34,23 @@ navbar ul li {
     letter-spacing: 0.75px;
     text-transform: capitalize;
     margin: 5px auto;
-    transform: skew();
-    transition: 0.2s transform;
 }
 
-navbar ul li a:hover{
+.nav-link ul li a {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}
+
+.nav-link ul li a:hover {
     color: rgba(172, 158, 255, 0.87);
 }
 
-navbar ul li a{
-    text-decoration: none;
-    color: white;
+.hamburger-button {
+    display: none;
 }
 
-.link-active{
+/* .link-active {
     background: linear-gradient(to right, #ffffff, #966c6c, #9a0c0c);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -47,12 +59,7 @@ navbar ul li a{
     background-size: 600% auto;
     animation: Animation-1 1.3s ease-in-out infinite alternate;
     text-shadow: 0.1px 0.1px 20px #70f8ff;
-}
-
-navbar ul {
-    display: flex;
-    align-items: center;
-}
+} */
 
 /* Main Hero Section */
 .hero-main-section {
@@ -90,7 +97,7 @@ navbar ul {
     text-transform: capitalize;
 }
 
-.my-name h4{
+.my-name h4 {
     color: rgba(172, 158, 255, 0.87);
     font-family: Outfit;
     font-size: 35px;
@@ -115,7 +122,7 @@ navbar ul {
     margin-top: 80px;
 }
 
-.little-about-me span:hover{
+.little-about-me span:hover {
     color: rgba(172, 158, 255, 0.87);
 }
 
@@ -139,8 +146,198 @@ navbar ul {
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 1480px) {
+@media screen and (min-width: 1280px) and (max-width: 1480px) {
     .hero-main-div {
         width: 70%;
+    }
+}
+
+@media screen and (min-width: 1040px) and (max-width: 1280px) {
+    .hero-main-div {
+        width: 90%;
+    }
+
+    .my-image img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 0.2px 0.2px 50px rgba(79, 69, 136, 0.286);
+        margin-left: 100px;
+    }
+
+    .my-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my-name {
+        display: flex;
+        margin-top: 100px;
+        margin-right: 100px;
+    }
+
+    .my-name h3 {
+        font-size: 40px;
+    }
+
+    .my-name h4 {
+        font-size: 30px;
+    }
+
+    .little-about-me {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1040px) {
+    .hero-main-div {
+        width: 90%;
+    }
+
+    .my-image img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 0.2px 0.2px 50px rgba(79, 69, 136, 0.286);
+        margin-left: 80px;
+    }
+
+    .my-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my-name {
+        display: flex;
+        margin-top: 100px;
+        margin-right: 80px;
+    }
+
+    .my-name h3 {
+        font-size: 40px;
+    }
+
+    .my-name h4 {
+        font-size: 30px;
+    }
+
+    .little-about-me {
+        font-size: 15px;
+    }
+
+    .mobile-nav-link {
+        display: none;
+    }
+
+    /* Mobile View  */
+    .nav-link {
+        display: none;
+    }
+
+    .nav-link ul li{
+        margin: 0px 20px;
+    }
+
+    .main-nav {
+        height: 0rem;
+        /* grid-template-columns: 2rem 2fr 3fr 2rem 2rem; */
+    }
+
+    .mobile-nav-link {
+        /* grid-column: 2/4; */
+        display: block;
+        position: relative;
+        z-index: 99;
+    }
+
+    .mobile-nav-link {
+        background-color: rgba(8, 24, 61, 0.816);
+        height: 20rem;
+        /* display: grid; */
+        /* grid-column: 2/5; */
+        align-items: center;
+        padding-left: 0px;
+        transition: all 0.2s linear;
+        transform-origin: top;
+        box-shadow: rgba(32, 32, 85, 0.611) 0px 50px 100px -20px,
+            rgba(43, 39, 90, 0.3) 0px 30px 60px -30px;
+    }
+
+    .mobile-nav-link ul {
+        height: 20rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .mobile-nav-link ul li {
+        list-style: none;
+    }
+
+    .mobile-menu-link ul li:first-child {
+        transition-delay: 0.2s;
+    }
+
+    .mobile-nav-link li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .hamburger-button {
+        display: block;
+    }
+
+    .hamburger-button i {
+        color: white;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 990px) {
+    .hero-main-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+    }
+    
+    .my-image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 0.2px 0.2px 50px rgba(79, 69, 136, 0.286);
+        margin-left: 0px;
+    }
+    
+    .my-name {
+        display: flex;
+        margin: 10px auto;
+        margin-top: 40px;
+        height: 100px;
+        text-align: center;
+    }
+    
+    .my-name h3 {
+        color: #FFF;
+        font-family: Outfit;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.25px;
+        text-transform: capitalize;
+    }
+    
+    .my-name h4 {
+        color: rgba(172, 158, 255, 0.87);
+        font-family: Outfit;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.75px;
+        text-transform: capitalize;
     }
 }
