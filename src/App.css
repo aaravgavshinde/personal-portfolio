@@ -1,42 +1,170 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Outfit;
 }
 
-.app-bg{
-  background-color: #14161B;
+.app-bg .main-nav {
+  margin: 40px auto;
+  width: 50%;
+  margin-top: 0;
+  padding-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .nav-link */
+.nav-link {
+  display: grid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link ul {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.nav-link ul li {
+  list-style: none;
+  color: #FFF;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-transform: capitalize;
+  margin: 5px auto;
+}
+
+.nav-link ul li a {
+  text-decoration: none;
   color: white;
+  margin: auto;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link ul li a:hover {
+  color: rgba(172, 158, 255, 0.87);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hamburger-button {
+  display: none;
+}
+
+/* .link-active {
+    background: linear-gradient(to right, #ffffff, #966c6c, #9a0c0c);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    background-size: 600% auto;
+    animation: Animation-1 1.3s ease-in-out infinite alternate;
+    text-shadow: 0.1px 0.1px 20px #70f8ff;
+} */
+
+/* Button to Top */
+.button-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button-to-top button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 30px
+}
+
+
+
+/* Making Responsive */
+@media screen and (min-width: 1480px) and (max-width: 1750px) {
+  .app-bg .main-nav {
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1480px) {
+  .app-bg .main-nav {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1040px) and (max-width: 1280px) {
+  .app-bg .main-nav {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1040px) {
+
+  /* Mobile View  */
+  .nav-link {
+    display: none;
+  }
+
+  .nav-link ul li {
+    margin: 0px 20px;
+  }
+
+  .main-nav {
+    height: 0rem;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    position: relative;
+    z-index: 99;
+
+  }
+
+  .mobile-nav-link {
+    background-color: rgba(8, 24, 61, 0.816);
+    height: 20rem;
+    align-items: center;
+    padding-left: 0px;
+    transition: all 0.2s linear;
+    transform-origin: top;
+    box-shadow: rgba(32, 32, 85, 0.611) 0px 50px 100px -20px,
+      rgba(43, 39, 90, 0.3) 0px 30px 60px -30px;
+    margin-top: 30px;
+    position: fixed;
+    top: 30px;
+    left: 10px;
+  }
+
+  .mobile-nav-link ul {
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-nav-link ul li {
+    list-style: none;
+  }
+
+  .mobile-menu-link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .mobile-nav-link li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .hamburger-button {
+    display: block;
+    position: fixed;
+    z-index: 89;
+    top: 20px;
+    left: 20px;
+  }
+
+  .hamburger-button i {
+    color: rgb(197, 187, 253);
+    font-size: 30px;
   }
 }

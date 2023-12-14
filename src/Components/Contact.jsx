@@ -2,11 +2,11 @@ import React from 'react'
 import './Contact.css'
 import './Common-CSS.css'
 
-export default function Contact() {
+export default function Contact({componentRef}) {
     return (
         <div className='contact-main-div'>
             <div className="contact-main-div-inner">
-                <div className='main-heading'>
+                <div className='main-heading' ref={componentRef}>
                     Contact
                 </div>
                 <div className='contact-box'>

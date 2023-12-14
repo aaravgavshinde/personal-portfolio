@@ -2,10 +2,10 @@ import React from 'react'
 import './Skills.css'
 import './Common-CSS.css'
 
-export default function Skills() {
+export default function Skills({componentRef}) {
     return (
         <div className='skills-main-div'>
-            <div className='main-heading'>Skills</div>
+            <div className='main-heading' ref={componentRef}>Skills</div>
             <div className='skills-box'>
                 <div className="my-skill-1 my-skill">
                     <div className="my-skill-head">Front End</div>

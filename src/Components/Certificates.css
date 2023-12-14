@@ -186,7 +186,7 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 822px) {
+@media screen and (min-width: 729px) and (max-width: 822px) {
     .certificates-main-div-inner {
         width: 90%;
     }
@@ -197,6 +197,44 @@
     .web-dev-details {
         margin-top: 20px;
         margin-left: 100px;
+    }
+    .certi-img img{
+        width: 70%;
+        height: auto;      
+    }
+    .react-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .react-details {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .backend-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .backend-details {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 729px) {
+    .certificates-main-div-inner {
+        width: 90%;
+    }
+    .web-dev-2 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .web-dev-details {
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .web-dev-details .proj-text-3 ul{
+        flex-wrap: wrap;
     }
     .certi-img img{
         width: 70%;

@@ -1,9 +1,9 @@
 * {
     font-family: 'Outfit', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
     font-family: Outfit;
+    background-color: #14161B;
 }
 
 .hero-main-div {
@@ -13,59 +13,11 @@
     padding-top: 50px;
 }
 
-/* .nav-link */
-.nav-link {
-    display: grid;
-}
-
-.nav-link ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.nav-link ul li {
-    list-style: none;
-    color: #FFF;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.75px;
-    text-transform: capitalize;
-    margin: 5px auto;
-}
-
-.nav-link ul li a {
-    text-decoration: none;
-    color: white;
-    margin: auto;
-}
-
-.nav-link ul li a:hover {
-    color: rgba(172, 158, 255, 0.87);
-}
-
-.hamburger-button {
-    display: none;
-}
-
-/* .link-active {
-    background: linear-gradient(to right, #ffffff, #966c6c, #9a0c0c);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-emphasis-color: transparent;
-    background-size: 600% auto;
-    animation: Animation-1 1.3s ease-in-out infinite alternate;
-    text-shadow: 0.1px 0.1px 20px #70f8ff;
-} */
-
 /* Main Hero Section */
 .hero-main-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .my-image {
@@ -190,7 +142,7 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 1040px) {
+@media screen and (min-width: 990px) and (max-width: 1040px) {
     .hero-main-div {
         width: 90%;
     }
@@ -226,74 +178,6 @@
     .little-about-me {
         font-size: 15px;
     }
-
-    .mobile-nav-link {
-        display: none;
-    }
-
-    /* Mobile View  */
-    .nav-link {
-        display: none;
-    }
-
-    .nav-link ul li{
-        margin: 0px 20px;
-    }
-
-    .main-nav {
-        height: 0rem;
-        /* grid-template-columns: 2rem 2fr 3fr 2rem 2rem; */
-    }
-
-    .mobile-nav-link {
-        /* grid-column: 2/4; */
-        display: block;
-        position: relative;
-        z-index: 99;
-    }
-
-    .mobile-nav-link {
-        background-color: rgba(8, 24, 61, 0.816);
-        height: 20rem;
-        /* display: grid; */
-        /* grid-column: 2/5; */
-        align-items: center;
-        padding-left: 0px;
-        transition: all 0.2s linear;
-        transform-origin: top;
-        box-shadow: rgba(32, 32, 85, 0.611) 0px 50px 100px -20px,
-            rgba(43, 39, 90, 0.3) 0px 30px 60px -30px;
-    }
-
-    .mobile-nav-link ul {
-        height: 20rem;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .mobile-nav-link ul li {
-        list-style: none;
-    }
-
-    .mobile-menu-link ul li:first-child {
-        transition-delay: 0.2s;
-    }
-
-    .mobile-nav-link li a {
-        text-decoration: none;
-        color: white;
-    }
-
-    .hamburger-button {
-        display: block;
-    }
-
-    .hamburger-button i {
-        color: white;
-        font-size: 30px;
-    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 990px) {
@@ -302,7 +186,7 @@
         grid-template-columns: 1fr;
         margin-top: 100px;
     }
-    
+
     .my-image img {
         width: 200px;
         height: 200px;
@@ -310,7 +194,7 @@
         box-shadow: 0.2px 0.2px 50px rgba(79, 69, 136, 0.286);
         margin-left: 0px;
     }
-    
+
     .my-name {
         display: flex;
         margin: 10px auto;
@@ -318,7 +202,7 @@
         height: 100px;
         text-align: center;
     }
-    
+
     .my-name h3 {
         color: #FFF;
         font-family: Outfit;
@@ -329,7 +213,7 @@
         letter-spacing: 2.25px;
         text-transform: capitalize;
     }
-    
+
     .my-name h4 {
         color: rgba(172, 158, 255, 0.87);
         font-family: Outfit;

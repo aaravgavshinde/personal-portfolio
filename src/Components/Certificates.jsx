@@ -3,11 +3,11 @@ import './Certificates.css'
 import './Common-CSS.css'
 import './Projects.css'
 
-export default function Certificates() {
+export default function Certificates({componentRef}) {
     return (
         <div className='certificates-main-div'>
             <div className='certificates-main-div-inner'>
-                <div className="main-heading">Certificates</div>
+                <div className="main-heading" ref={componentRef}>Certificates</div>
 
                 {/* Front End */}
                 <div className='web-dev certificate-box'>

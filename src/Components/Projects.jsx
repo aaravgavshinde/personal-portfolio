@@ -2,10 +2,10 @@ import React from 'react'
 import './Projects.css'
 import './Common-CSS.css'
 
-export default function Projects() {
+export default function Projects({componentRef}) {
     return (
         <div className='projects-main-div'>
-            <div className="main-heading">Projects</div>
+            <div className="main-heading" ref={componentRef}>Projects</div>
             <div className='projects-box'>
                 {/* E-Electronics */}
                 <div className='project project-1'>

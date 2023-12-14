@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import 'react-typed/dist/animatedCursor.css';
 // import { NavLink } from "react-router-dom";
 
-export default function HERO() {
+export default function HERO(props) {
 
     const el = useRef(null);
 
@@ -25,60 +25,13 @@ export default function HERO() {
         };
     }, []);
 
-    const [showMediaIcons, setShowMediaIcons] = useState(false);
+    // const ref = useRef(null);
+    // const handleClick = () => {
+    //     ref.current?.scrollIntoView({ behavior: 'smooth' });
+    // };
 
     return (
         <div className='hero-main-div'>
-            <div className="hamburger-button">
-                <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-                    <i className="fa fa-bars" aria-hidden="true"></i>
-                </a>
-            </div>
-            <nav className="main-nav">
-                <div className={showMediaIcons ? "nav-link mobile-nav-link" : "nav-link"}>
-                    <ul>
-                        <li><a href=''>More About Me</a></li>
-                        <li><a href=''>Skills</a></li>
-                        <li><a href=''>Projects</a></li>
-                        <li><a href=''>Resume</a></li>
-                        <li><a href=''>Contact</a></li>
-                        <li><a href=''>Certificates</a></li>
-                        <li><a href=''>Education</a></li>
-                        <li><a href=''>Extra-Curricular</a></li>
-                    </ul>
-
-                    {/* <ul>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>More About Me</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Skills</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Projects</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Resume</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Contact</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Certificates</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Education</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Extra-Curricular</NavLink></li>
-                </ul> */}
-                </div>
-            </nav >
-
-            {/* < Navbar expand = "lg" className = "bg-body-transparent .text-white" >
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="">More About Me</Nav.Link>
-                        <Nav.Link href="">Skills</Nav.Link>
-                        <Nav.Link href="">Projects</Nav.Link>
-                        <Nav.Link href="">Resume</Nav.Link>
-                        <Nav.Link href="">Contact</Nav.Link>
-                        <Nav.Link href="">Certificates</Nav.Link>
-                        <Nav.Link href="">Education</Nav.Link>
-                        <Nav.Link href="">Extra-Curricular</Nav.Link>                        
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-            </Navbar> */}
-
-
             <div className='hero-main-section'>
                 <div className='my-image'>
                     <img src="./Images/Me.jpg" alt="MyImage" />
