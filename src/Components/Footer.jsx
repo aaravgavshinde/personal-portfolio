@@ -5,9 +5,6 @@ export default function Footer() {
     return (
         <div className='footer-main-div'>
             <div className='footer-main-div-inner'>
-                <div className='back-to-top-button'>
-                    <a href="">Back to top ^</a>
-                </div>
                 <div className='hr-div'>
                     <hr />
                 </div>
@@ -24,12 +21,12 @@ export default function Footer() {
                             <li className="footer-link"><a href="">Contact</a></li>
                             <li className="footer-link"><a href="">Certificates</a></li>
                             <li className="footer-link"><a href="">Education</a></li>
-                            <li className="footer-link"><a href="">Extra-Curricular</a></li>
+                            {/* <li className="footer-link"><a href="">Extra-Curricular</a></li> */}
                         </ul>
                     </div>
                     <div className='loved-my-work'>
                         <h3>Loved My Work? Give Me A Chance!</h3>
-                        <a href=""><button>HIRE ME</button></a>
+                        <a href="/hireme"><button>HIRE ME</button></a>
                     </div>
                 </div>
                 <div className='footer-end-content'>

@@ -1,0 +1,88 @@
+* {
+    font-family: Outfit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-main-div {
+    width: 50%;
+    margin: 10px auto;
+}
+
+/* Headings */
+.back-to-home {
+    color: #F99417;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    margin-top: 60px;
+}
+
+.back-to-home:hover {
+    text-decoration: underline;
+}
+
+.main-head {
+    margin-top: 10px;
+}
+
+.small-heading {
+    font-size: 14px;
+    margin-top: 150px;
+    letter-spacing: 6px;
+}
+
+/* Main Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.about-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about-name{
+    color: rgb(76, 76, 76);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.about-text {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    display: grid;
+    align-items: center;
+    margin: 20px 50px;
+}
+
+.about-text span {
+    color: rgba(172, 158, 255, 0.87);
+}
+
+/* Last Para */
+.ans-why-web-dev {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.ans-why-web-dev span {
+    color: rgba(172, 158, 255, 0.87);
+}

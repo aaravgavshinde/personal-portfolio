@@ -1,6 +1,6 @@
 .footer-main-div{
     width: 100%;
-    background-color: #14161B;
+    /* background-color: #14161B; */
 }
 
 .footer-main-div-inner {
@@ -10,6 +10,16 @@
     margin: 300px auto 0px auto;
     background-color: #0e245686;
     padding-bottom: 20px;
+}
+.footer-main-div-inner div{
+    background-color: #101D3A;
+}
+.footer-main-div-inner ul li, .footer-main-div-inner ul, .footer-main-div-inner a{
+    background-color: #101D3A;
+}
+
+.loved-my-work , .loved-my-work h3, .loved-my-work a{
+    background-color: #101D3A;
 }
 
 /* Top Portion */
@@ -107,7 +117,7 @@ hr {
     line-height: normal;
     letter-spacing: 1.5px;
     text-transform: capitalize;
-    text-shadow: 0.4px 0.4px 30px rgb(214, 164, 255)
+    text-shadow: 0.2px 0.2px 10px rgb(214, 164, 255);
 }
 
 .loved-my-work button {
@@ -145,11 +155,10 @@ hr {
 }
 
 .made-with-love{
-    color: rgb(110, 177, 232);
-    filter: hue-rotate(60deg);
+    color: rgb(228, 243, 255);
     background: transparent;
     margin: auto;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 /* Making Responsive */

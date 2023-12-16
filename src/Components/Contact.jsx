@@ -32,7 +32,7 @@ export default function Contact({componentRef}) {
                     </div>
                 </div>
                 <div className='hire-me'>
-                    <a href=""><button className='hire-me-button'>Hire Me</button></a>
+                    <a href="/hireme"><button className='hire-me-button'>Hire Me</button></a>
                 </div>
             </div>
         </div>

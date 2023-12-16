@@ -1,14 +1,10 @@
 import './App.css';
-import Certificates from './Components/Certificates';
-import Contact from './Components/Contact';
-import Education from './Components/Education';
-import Footer from './Components/Footer';
-import HERO from './Components/HERO'
-import Projects from './Components/Projects';
-import Resume from './Components/Resume';
-import Skills from './Components/Skills';
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Components/HERO.css'
+import MoreAboutMe from './Components/MoreAboutMe';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import AllCompo from './AllCompo';
+import HireMe from './Components/HireMe';
 
 function App() {
   const skills = useRef(null);
@@ -50,17 +46,42 @@ function App() {
 
   const [showMediaIcons, setShowMediaIcons] = useState(false);
 
+  const [showUpArrow, setShowUpArrow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        setShowUpArrow(true);
+      }
+      else {
+        setShowUpArrow(false);
+      }
+    })
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const location = useLocation();
+  // Check if the current location matches a specific route where you want to hide the navbar
+  const hideNavbar = location.pathname === '/aboutme' || location.pathname === '/hireme';
+
   return (
     <div className='app-bg'>
+
       <div className="hamburger-button">
         <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
           <i className="fa fa-bars" aria-hidden="true"></i>
         </a>
       </div>
-      <nav className="main-nav">
-        <div className={showMediaIcons ? "nav-link mobile-nav-link" : "nav-link"}>
+      {!hideNavbar && <nav className='main-nav'>
+        <div className={showMediaIcons ? "nav-link mobile-nav-link" : "nav-link"} >
           <ul>
-            <li><a href=''>More About Me</a></li>
+            <li><a href='/aboutme'>More About Me</a></li>
             <li><a onClick={compoA}>Skills</a></li>
             <li><a onClick={compoB}>Projects</a></li>
             <li><a onClick={compoC}>Resume</a></li>
@@ -69,31 +90,18 @@ function App() {
             <li><a onClick={compoF}>Education</a></li>
             {/* <li><a onClick={compoG}>Extra-Curricular</a></li> */}
           </ul>
-
-          {/* <ul>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>More About Me</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Skills</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Projects</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Resume</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Contact</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Certificates</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Education</NavLink></li>
-            <li><NavLink className={({ isActive }) => (isActive ? "link-active" : "none")} to=''>Extra-Curricular</NavLink></li>
-          </ul> */}
         </div>
-      </nav >
+      </nav >}
       <div className='button-to-top'>
-        <a href=''><button><i class="fa fa-arrow-up" aria-hidden="true"></i></button></a>
+        <button>{showUpArrow && <i onClick={scrollToTop} class="fa fa-arrow-up" aria-hidden="true"></i>}</button>
       </div>
+      
+      <Routes>
+        <Route exact path="/" element={<AllCompo skills={skills} projects={projects} certificates={certificates} education={education} resume={resume} contact={contact} />} />
+        <Route exact path='/aboutme' element={<MoreAboutMe />} />
+        <Route exact path='/hireme' element={<HireMe />} />
+      </Routes>
 
-      <HERO />
-      <Skills componentRef={skills} />
-      <Projects componentRef={projects} />
-      <Resume componentRef={resume} />
-      <Contact componentRef={contact} />
-      <Certificates componentRef={certificates} />
-      <Education componentRef={education} />
-      <Footer />
     </div>
   );
 }
