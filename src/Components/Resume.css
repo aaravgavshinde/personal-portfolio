@@ -69,9 +69,35 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 840px) {
+@media screen and (min-width: 675px) and (max-width: 840px) {
     .my-resume img{
         width: 600px;
         height: auto;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 675px) {
+    .my-resume img{
+        width: 500px;
+        height: auto;
+    }
+    .resume-open{
+        font-size: 12px;
+    }
+    .resume-download{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px) {
+    .my-resume img{
+        width: 450px;
+        height: auto;
+    }
+    .resume-open{
+        font-size: 12px;
+    }
+    .resume-download{
+        font-size: 12px;
     }
 }

@@ -181,6 +181,10 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 990px) {
+    .hero-main-div {
+        width: 70%;
+    }
+
     .hero-main-section {
         display: grid;
         grid-template-columns: 1fr;

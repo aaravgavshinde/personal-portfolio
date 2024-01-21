@@ -11,7 +11,7 @@ export default function HERO(props) {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Full Stack Developer", "Web Designer", "Video Editor", "Photographer"],
+            strings: ["Full Stack Developer", "React.js Developer", "Web Designer", "Video Editor", "Photographer"],
             startDelay: 300,
             typeSpeed: 60,
             backSpeed: 30,

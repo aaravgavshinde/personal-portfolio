@@ -18,10 +18,10 @@ export default function Contact({componentRef}) {
                         <div className="contact-head">Gmail ID</div>
                         <div className="contact-content cc-2"><a href="">aaravgavshinde@gmail.com</a></div>
                     </div>
-                    <div className="contact-box-inner">
+                    {/* <div className="contact-box-inner">
                         <div className="contact-head">WhatsApp</div>
                         <div className="contact-content">+91 7898733798</div>
-                    </div>
+                    </div> */}
                     <div className="contact-box-inner">
                         <div className="contact-head">Instagram</div>
                         <div className="contact-content"><a href="https://www.instagram.com/aaravgavshinde/">Aarav Gavshinde &gt;</a></div>

@@ -17,7 +17,7 @@ export default function Projects({componentRef}) {
                         <div className='group-1'>
                             <div className='group-2'>
                                 <div className='proj-text-2'>Technologies Used:</div>
-                                <div className="proj-text-3">
+                                <div className="proj-text-3 e-tech">
                                     <ul>
                                         <li>React.js</li>
                                         <li>HTML</li>
