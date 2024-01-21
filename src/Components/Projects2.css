@@ -67,3 +67,38 @@
     margin: 4px;
     border-radius: 4px;
 }
+
+/* Making Responsive */
+@media screen and (min-width: 1463px) and (max-width: 1757px) {
+    .projects2-main-div{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1253px) and (max-width: 1463px) {
+    .projects2-main-div{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1113px) and (max-width: 1253px) {
+    .projects2-main-div{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 633px) and (max-width: 1113px) {
+    .projects2-main-div{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 633px) {
+    .projects2-main-div{
+        width: 90%;
+    }
+    .projects2-box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
