@@ -1,0 +1,98 @@
+.certificates-main-div {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.certificate {
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 15px 5px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background: linear-gradient(180deg, #25272F 0%, rgba(63, 67, 78, 0.61) 54.58%, rgba(107, 109, 117, 0.24) 87.92%);
+    transform: scale(1);
+    transition: 0.2s transform;
+    box-shadow: 1px 1px 5px #10192d;
+    align-items: center;
+}
+
+.certificate:hover {
+    transform: scale(1.02);
+    filter: brightness(120%);
+}
+
+.certificates-box:hover .certificate:not(:hover){
+    filter: brightness(60%);
+}
+
+.certi-1, .certi-2{
+    background: transparent;
+    margin: 5px;
+}
+
+.certi-1 :nth-child(1) {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+    background: transparent;
+}
+
+.certi-1 :nth-child(1) span {
+    color: #F99417;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+    text-transform: capitalize;
+}
+
+.certi-1 :nth-child(2) {
+    color: #7a6cc7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: 30px;
+    background: transparent;
+}
+
+.certi-2 a{
+    border-radius: 5px;
+    background: #AC9EFF;
+    color: #1E1E1E;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 4px 8px;
+    margin-left: 10px;
+}
+
+/* Making Responsive */
+@media screen and (min-width: 1281px) and (max-width: 1530px) {
+    .certificates-main-div {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1097px) and (max-width: 1281px) {
+    .certificates-main-div {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 665px) and (max-width: 1097px) {
+    .certificates-main-div {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 665px) {
+    .certificates-main-div {
+        width: 80%;
+    }
+    .certificate{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .certi-2 a{
+        margin-left: 0px;
+    }
+}

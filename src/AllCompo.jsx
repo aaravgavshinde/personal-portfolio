@@ -1,5 +1,5 @@
 import React from 'react'
-import Certificates from './Components/Certificates';
+// import Certificates from './Components/Certificates';
 import Contact from './Components/Contact';
 import Education from './Components/Education';
 import Footer from './Components/Footer';
@@ -8,6 +8,7 @@ import HERO from './Components/HERO'
 import Resume from './Components/Resume';
 import Skills from './Components/Skills';
 import Projects2 from './Components/Projects2';
+import Certificates2 from './Components/Certificates2';
 
 export default function AllCompo(props) {
     return (
@@ -18,7 +19,8 @@ export default function AllCompo(props) {
             {/* <Projects  /> */}
             <Resume componentRef={props.resume} />
             <Contact componentRef={props.contact} />
-            <Certificates componentRef={props.certificates} />
+            <Certificates2  componentRef={props.certificates}/>
+            {/* <Certificates /> */}
             <Education componentRef={props.education} />
             <Footer />
         </div>

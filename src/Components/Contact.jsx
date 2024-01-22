@@ -31,9 +31,9 @@ export default function Contact({componentRef}) {
                         <div className="contact-content cc-2"><a href="https://github.com/aaravgavshinde">aaravgavshinde &gt;</a></div>
                     </div>
                 </div>
-                <div className='hire-me'>
+                {/* <div className='hire-me'>
                     <a href="/hireme"><button className='hire-me-button'>Hire Me</button></a>
-                </div>
+                </div> */}
             </div>
         </div>
     )
