@@ -22,23 +22,35 @@ function App() {
     });
   };
 
-  const compoA = () => {
+  const compoA = (e) => {
+    e.preventDefault();
     scrollToRef(skills);
+    setShowMediaIcons(!showMediaIcons);
   };
-  const compoB = () => {
+  const compoB = (e) => {
+    e.preventDefault();
     scrollToRef(projects);
+    setShowMediaIcons(!showMediaIcons);
   };
-  const compoC = () => {
+  const compoC = (e) => {
+    e.preventDefault();
     scrollToRef(resume);
+    setShowMediaIcons(!showMediaIcons);
   };
-  const compoD = () => {
+  const compoD = (e) => {
+    e.preventDefault();
     scrollToRef(contact);
+    setShowMediaIcons(!showMediaIcons);
   };
-  const compoE = () => {
+  const compoE = (e) => {
+    e.preventDefault();
     scrollToRef(certificates);
+    setShowMediaIcons(!showMediaIcons);
   };
-  const compoF = () => {
+  const compoF = (e) => {
+    e.preventDefault();
     scrollToRef(education);
+    setShowMediaIcons(!showMediaIcons);
   };
   // const compoG = () => {
   //   scrollToRef(extracurricular);
@@ -66,18 +78,23 @@ function App() {
     });
   };
 
+  const toggleMediaIcons = (e) => {
+    e.preventDefault(); // Prevent default behavior
+    setShowMediaIcons(!showMediaIcons);
+  };
+
   const location = useLocation();
-  // Check if the current location matches a specific route where you want to hide the navbar
+  // Check if the current location matches a specific route where we want to hide the navbar
   const hideNavbar = location.pathname === '/aboutme' || location.pathname === '/hireme';
 
   return (
     <div className='app-bg'>
 
-      <div className="hamburger-button">
-        <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+      {!hideNavbar && <div className="hamburger-button">
+        <a href="#" onClick={toggleMediaIcons}>
           <i className="fa fa-bars" aria-hidden="true"></i>
         </a>
-      </div>
+      </div>}
       {!hideNavbar && <nav className='main-nav'>
         <div className={showMediaIcons ? "nav-link mobile-nav-link" : "nav-link"} >
           <ul>
