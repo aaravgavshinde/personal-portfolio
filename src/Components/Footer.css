@@ -33,21 +33,6 @@ hr {
     margin: 30px auto;
 }
 
-.back-to-top-button {
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.25px;
-    text-transform: capitalize;
-    text-align: center;
-}
-
-.back-to-top-button a {
-    text-decoration: none;
-    color: #f99317;
-}
-
 /* Bottom Portion */
 .footer-content{
     display: grid;
@@ -186,7 +171,7 @@ hr {
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 930px) {
+@media screen and (min-width: 777px) and (max-width: 930px) {
     .footer-main-div-inner {
         width: 100%;
     }
@@ -207,5 +192,88 @@ hr {
         margin: 20px 10px;
         box-shadow: 0.3px 0.3px 8px rgba(240, 194, 9, 0.821);
         cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 615px) and (max-width: 777px) {
+    .footer-main-div-inner {
+        width: 100%;
+    }
+    .quick-links-box{
+        margin-left: 100px;
+    }
+    .loved-my-work h3 {
+        font-size: 15px;
+    }
+    .loved-my-work button {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 20px;
+        border: none;
+        margin: 20px 10px;
+        box-shadow: 0.3px 0.3px 8px rgba(240, 194, 9, 0.821);
+        cursor: pointer;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media screen and (min-width: 347px) and (max-width: 615px) {
+    .footer-main-div-inner {
+        width: 100%;
+    }
+    .quick-links-box{
+        margin-left: 20px;
+    }
+    .loved-my-work h3 {
+        font-size: 15px;
+    }
+    .loved-my-work button {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 20px;
+        border: none;
+        margin: 20px 10px;
+        box-shadow: 0.3px 0.3px 8px rgba(240, 194, 9, 0.821);
+        cursor: pointer;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .loved-my-work{
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 347px) {
+    .footer-main-div-inner {
+        width: 100%;
+    }
+    .quick-links-box{
+        margin-left: 20px;
+    }
+    .loved-my-work button {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 20px;
+        border: none;
+        margin: 20px 10px;
+        box-shadow: 0.3px 0.3px 8px rgba(240, 194, 9, 0.821);
+        cursor: pointer;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .loved-my-work{
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+    .loved-my-work h3{
+        font-size: 12px;
     }
 }

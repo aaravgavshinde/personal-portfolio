@@ -76,10 +76,9 @@
     }
 }
 
-@media screen and (min-width: 550px) and (max-width: 675px) {
+@media screen and (min-width: 521px) and (max-width: 675px) {
     .my-resume img{
-        width: 500px;
-        height: auto;
+        display: none;
     }
     .resume-open{
         font-size: 12px;
@@ -89,15 +88,17 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 550px) {
+@media screen and (min-width: 0px) and (max-width: 521px) {
     .my-resume img{
-        width: 450px;
-        height: auto;
+        display: none;
     }
     .resume-open{
         font-size: 12px;
     }
     .resume-download{
         font-size: 12px;
+    }
+    .resume-main-div{
+        width: 90%;
     }
 }

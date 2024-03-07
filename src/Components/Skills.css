@@ -141,9 +141,35 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 784px) {
+@media screen and (min-width: 551px) and (max-width: 784px) {
     .skills-main-div{
-        width: 70%;
+        width: 80%;
+    }
+    .skills-box {
+        display: grid;
+        grid-template:
+            'a'
+            'b'
+            'c'
+            'd'
+            'e'
+            'f'
+            'g'
+            'h'
+            'i'
+            'j';
+    }
+    .my-skill-head {
+        font-size: 10px;
+    }
+    .my-skill-content {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 551px) {
+    .skills-main-div{
+        width: 90%;
     }
     .skills-box {
         display: grid;

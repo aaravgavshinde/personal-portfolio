@@ -48,6 +48,7 @@
 
 .hamburger-button {
   display: none;
+  background: transparent;
 }
 
 /* .link-active {

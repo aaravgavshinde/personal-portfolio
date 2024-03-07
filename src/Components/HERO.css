@@ -180,9 +180,11 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 990px) {
+@media screen and (min-width: 701px) and (max-width: 990px) {
     .hero-main-div {
         width: 70%;
+        margin: 5px auto;
+        padding-top: 0px;
     }
 
     .hero-main-section {
@@ -227,5 +229,60 @@
         line-height: normal;
         letter-spacing: 1.75px;
         text-transform: capitalize;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 701px) {
+    .hero-main-div {
+        width: 80%;
+        margin: 5px auto;
+        padding-top: 0px;
+    }
+
+    .hero-main-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+    }
+
+    .my-image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 0.2px 0.2px 50px rgba(79, 69, 136, 0.286);
+        margin-left: 0px;
+    }
+
+    .my-name {
+        display: flex;
+        margin: 10px auto;
+        margin-top: 40px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .my-name h3 {
+        color: #FFF;
+        font-family: Outfit;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.25px;
+        text-transform: capitalize;
+    }
+
+    .my-name h4 {
+        color: rgba(172, 158, 255, 0.87);
+        font-family: Outfit;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.75px;
+        text-transform: capitalize;
+    }
+    .little-about-me{
+        font-size: 15px;
     }
 }

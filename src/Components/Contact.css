@@ -132,12 +132,28 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 722px) {
+@media screen and (min-width: 400px) and (max-width: 722px) {
     .contact-main-div-inner {
         width: 80%;
     }
     .contact-box {
         display: grid;
         grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .contact-main-div-inner {
+        width: 90%;
+    }
+    .contact-box {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .contact-head{
+        font-size: 10px;
+    }
+    .contact-content{
+        font-size: 17px;
     }
 }
