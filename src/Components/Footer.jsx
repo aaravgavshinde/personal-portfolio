@@ -26,7 +26,7 @@ export default function Footer() {
                     </div>
                     <div className='loved-my-work'>
                         <h3>Loved My Work? Give Me A Chance!</h3>
-                        <a href="/hireme"><button>HIRE ME</button></a>
+                        {/* <a href="/hireme"><button>HIRE ME</button></a> */}
                     </div>
                 </div>
                 <div className='footer-end-content'>

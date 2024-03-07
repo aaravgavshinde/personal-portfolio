@@ -7,7 +7,7 @@ export default function MoreAboutMe() {
         <div className='about-main-div'>
             <div className='back-to-home'><a href="/"> &lt; Back to Home </a></div>
             <div className='about-heading'>
-                <div className='main-heading main-head'> About Me </div>
+                <div className='main-head'> About Me </div>
             </div>
             <div className='about-content'>
                 <div className='about-image'>
@@ -21,7 +21,7 @@ export default function MoreAboutMe() {
                 </div>
             </div>
             <div className='why-web-dev'>
-                <div className='main-heading small-heading'>Why did I choose Web Dev?</div>
+                <div className='main-head'>Why did I choose Web Dev?</div>
                 <div className='ans-why-web-dev'>
                     Since childhood <span>I loved Drawing</span> and Coloring things, and as I grew, I found my <span>interest in Photography and Videography</span>.
                     These interests made me realize that I am <span>good at visualizing things</span> and could do great in Development.
