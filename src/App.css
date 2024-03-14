@@ -12,6 +12,29 @@
   padding-top: 20px;
 }
 
+.main-nav {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  z-index: 99;
+}
+
+.nav-link {
+  background-color: rgba(173, 158, 255, 0.436);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.nav-link ul{
+  background-color: transparent;
+}
+
+.nav-link ul li a{
+  background-color: rgba(173, 158, 255, 0.436);
+}
+
 /* .nav-link */
 .nav-link {
   display: grid;
@@ -81,13 +104,13 @@
   background: transparent;
 }
 
-.button-to-top button i{
+.button-to-top button i {
   background: rgba(169, 169, 169, 0.43);
   border-radius: 50%;
   padding: 4px;
 }
 
-.hide-nav{
+.hide-nav {
   display: none;
 }
 

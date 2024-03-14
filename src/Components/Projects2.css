@@ -25,6 +25,7 @@
 .projects2-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
 }
 
 .proj2-img {
