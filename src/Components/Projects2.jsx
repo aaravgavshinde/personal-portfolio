@@ -8,6 +8,24 @@ export default function Projects2({ componentRef }) {
       <div className="main-heading" ref={componentRef}>Projects</div>
       {/* <div className='all-projects'><a href="">See All In Detail &gt;</a></div> */}
       <div className='projects2-box'>
+        {/* CozyService */}
+        <div className='project2 project2-1'>
+          <div>
+            <a href="https://cozyservice.vercel.app/" target='_blank'><img className='proj2-img' src="./Images/cozyservice.png" alt="hello" /></a>
+          </div>
+          <div className='proj2-content'>
+            <div className='proj2-text'>CozyService</div> 
+            <div className='proj2-stack'>
+              <ul>
+                <li>React.js</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* E-Electronics */}
         <div className='project2 project2-1'>
           <div>
