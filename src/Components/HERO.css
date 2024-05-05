@@ -40,7 +40,6 @@
 
 .my-name h3 {
     color: #FFF;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
@@ -51,7 +50,6 @@
 
 .my-name h4 {
     color: rgba(172, 158, 255, 0.87);
-    font-family: Outfit;
     font-size: 35px;
     font-style: normal;
     font-weight: 500;
@@ -63,7 +61,6 @@
 /* Little About Me */
 .little-about-me {
     color: #FFF;
-    font-family: Outfit;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -80,15 +77,58 @@
 
 /* Scroll Down Text  */
 .scroll-down-text {
-    color: rgb(61, 65, 75);
-    font-family: Outfit;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 1px;
-    margin: 200px 20px;
+    margin: 200px 20px 10px 20px;
     text-align: center;
+    background: linear-gradient(to right, rgb(116, 116, 116), rgb(196, 196, 196), rgb(116, 116, 116));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 2s ease-in-out infinite;
+}
+
+.down-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.down-arrow i{
+    color: white;
+    font-size: 30px;
+    background: linear-gradient(to right, rgb(116, 116, 116), rgb(148, 148, 148), rgb(116, 116, 116));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 1s ease-in-out infinite, arrowDown 1s ease-in-out infinite;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes arrowDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Making Responsive */

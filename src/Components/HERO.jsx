@@ -1,34 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import './HERO.css'
-import Typed from "typed.js";
-import { useEffect, useRef } from "react";
-import 'react-typed/dist/animatedCursor.css';
 // import { NavLink } from "react-router-dom";
 
 export default function HERO(props) {
-
-    const el = useRef(null);
-
-    useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: ["Full Stack Developer", "React.js Developer", "Web Designer", "Video Editor", "Photographer"],
-            startDelay: 300,
-            typeSpeed: 60,
-            backSpeed: 30,
-            backDelay: 100,
-            loop: true
-        });
-
-        // Destroying
-        return () => {
-            typed.destroy();
-        };
-    }, []);
-
-    // const ref = useRef(null);
-    // const handleClick = () => {
-    //     ref.current?.scrollIntoView({ behavior: 'smooth' });
-    // };
 
     return (
         <div className='hero-main-div'>
@@ -39,7 +13,7 @@ export default function HERO(props) {
                 <div className='my-name'>
                     <div>
                         <h3 className='aarav'>Aarav Gavshinde</h3>
-                        <h4 ref={el}></h4>
+                        <h4>React.js Developer</h4>
                     </div>
                 </div>
             </div>
@@ -50,6 +24,9 @@ programming languages, front-end and back-end development, database management, 
 web design tools. Adept at utilizing the latest technologies to create seamless web applications. </div> */}
 
             <div className="scroll-down-text">scroll down to explore</div>
+            <div className="down-arrow">
+                <i className="fa fa-angle-double-down" aria-hidden="true"></i>
+            </div>
         </div >
     )
 }
