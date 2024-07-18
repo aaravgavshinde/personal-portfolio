@@ -12,7 +12,7 @@ export default function Projects2({ componentRef }) {
 
   useGSAP (() => {
     gsap.from('.proj-ani-1', {
-        x: -400,
+        x: -100,
         duration: 0.5,
         ease: 'power1.in',
         opacity: 0,
@@ -23,7 +23,7 @@ export default function Projects2({ componentRef }) {
         }
     })
     gsap.from('.proj-ani-2', {
-        x: 400,
+        x: 100,
         duration: 0.5,
         opacity: 0,
         ease: 'power1.in',

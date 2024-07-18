@@ -2,6 +2,7 @@
     margin: 40px auto;
     width: 50%;
     background-color: #14161B;
+    overflow-x: hidden;
 }
 
 .all-projects {

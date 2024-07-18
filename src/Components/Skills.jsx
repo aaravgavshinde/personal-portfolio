@@ -12,7 +12,7 @@ export default function Skills({componentRef}) {
 
     useGSAP (() => {
         gsap.from('.skill-ani-1', {
-            x: -400,
+            x: -100,
             duration: 0.5,
             ease: 'power1.in',
             opacity: 0,
@@ -23,7 +23,7 @@ export default function Skills({componentRef}) {
             }
         })
         gsap.from('.skill-ani-2', {
-            x: 400,
+            x: 100,
             duration: 0.5,
             opacity: 0,
             ease: 'power1.in',
