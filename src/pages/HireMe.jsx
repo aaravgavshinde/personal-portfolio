@@ -1,5 +1,5 @@
 import React from 'react'
-import './HireMe.css'
+import '../styles/HireMe.css'
 
 export default function HireMe() {
     return (

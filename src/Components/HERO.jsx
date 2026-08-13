@@ -1,6 +1,7 @@
 import React from "react";
-import './HERO.css'
+import '../styles/HERO.css'
 // import { NavLink } from "react-router-dom";
+import img_0 from '../assets/Images/Me.jpg';
 
 export default function HERO(props) {
 
@@ -8,7 +9,7 @@ export default function HERO(props) {
         <div className='hero-main-div'>
             <div className='hero-main-section'>
                 <div className='my-image'>
-                    <img src="./Images/Me.jpg" alt="MyImage" />
+                    <img src={img_0} alt="MyImage" />
                 </div>
                 <div className='my-name'>
                     <div>

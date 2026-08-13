@@ -1,6 +1,9 @@
 import React from 'react'
-import './Projects.css'
-import './Common-CSS.css'
+import '../styles/Projects.css'
+import '../styles/Common-CSS.css'
+import img_0 from '../assets/Images/e-commerce.png';
+import img_1 from '../assets/Images/todo-app.png';
+import img_2 from '../assets/Images/word-app.png';
 
 export default function Projects({componentRef}) {
     return (
@@ -10,7 +13,7 @@ export default function Projects({componentRef}) {
                 {/* E-Electronics */}
                 <div className='project project-1'>
                     <div>
-                        <a href="https://e-shop-ecommerce.onrender.com/" target='_blank'><img className='proj-img-1 proj-img' src="./Images/e-commerce.png" alt="hello" /></a>
+                        <a href="https://e-shop-ecommerce.onrender.com/" target='_blank'><img className='proj-img-1 proj-img' src={img_0} alt="hello" /></a>
                     </div>
                     <div className='proj-content'>
                         <div className='proj-text-1'>E-Electronics</div>
@@ -42,7 +45,7 @@ export default function Projects({componentRef}) {
                 {/* To-Do List */}
                 <div className='project project-2'>
                     <div>
-                        <a href="https://todoapp-6fxj.onrender.com/" target='_blank'><img className='proj-img-2 proj-img' src="./Images/todo-app.png" alt="" /></a>
+                        <a href="https://todoapp-6fxj.onrender.com/" target='_blank'><img className='proj-img-2 proj-img' src={img_1} alt="" /></a>
                     </div>
                     <div className='proj-content'>
 
@@ -71,7 +74,7 @@ export default function Projects({componentRef}) {
                 {/* Word Convertor */}
                 <div className='project project-2'>
                     <div>
-                        <a href="https://word-converter-react.onrender.com/" target='_blank'><img className='proj-img-3 proj-img' src="./Images/word-app.png" alt="" /></a>
+                        <a href="https://word-converter-react.onrender.com/" target='_blank'><img className='proj-img-3 proj-img' src={img_2} alt="" /></a>
                     </div>
                     <div className='proj-content'>
                         <div className='proj-text-1'>Word Convertor</div>

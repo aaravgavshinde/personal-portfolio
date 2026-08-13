@@ -1,6 +1,6 @@
 import React from 'react'
-import './Skills.css'
-import './Common-CSS.css'
+import '../styles/Skills.css'
+import '../styles/Common-CSS.css'
 // GSAP
 import { gsap } from "gsap";
 import {useGSAP} from '@gsap/react';
@@ -51,27 +51,27 @@ export default function Skills({componentRef}) {
                     <div className="my-skill-head">Back End</div>
                     <div className="my-skill-content">Node.js, Express.js</div>
                 </div>
-                <div className="my-skill skill-ani-1">
+                <div className="my-skill skill-ani-2">
                     <div className="my-skill-head">State Management</div>
                     <div className="my-skill-content">Redux</div>
                 </div>
-                <div className="my-skill skill-ani-2">
+                <div className="my-skill skill-ani-1">
                     <div className="my-skill-head">Additional</div>
                     <div className="my-skill-content">Bootstrap, Tailwind CSS</div>
                 </div>
-                <div className="my-skill skill-ani-1">
+                <div className="my-skill skill-ani-2">
                     <div className="my-skill-head">Tools and Technologies</div>
                     <div className="my-skill-content">Git / GitHub, VS Code</div>
                 </div>
-                <div className="my-skill skill-ani-2">
+                <div className="my-skill skill-ani-1">
                     <div className="my-skill-head">AI Tools</div>
                     <div className="my-skill-content">Prompt Engineering in ChatGPT, etc</div>
                 </div>
-                <div className="my-skill skill-ani-1">
+                <div className="my-skill skill-ani-2">
                     <div className="my-skill-head">Web Design</div>
                     <div className="my-skill-content">Concepts of Web Design, Figma</div>
                 </div>
-                <div className="my-skill skill-ani-2">
+                <div className="my-skill skill-ani-1">
                     <div className="my-skill-head">API Integration</div>
                     <div className="my-skill-content">REST APIs</div>
                 </div>

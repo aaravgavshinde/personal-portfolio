@@ -1,6 +1,7 @@
 import React from 'react'
-import './MoreAboutMe.css'
-import './Common-CSS.css'
+import '../styles/MoreAboutMe.css'
+import '../styles/Common-CSS.css'
+import img_0 from '../assets/Images/Me.jpg';
 
 export default function MoreAboutMe() {
     return (
@@ -11,7 +12,7 @@ export default function MoreAboutMe() {
             </div>
             <div className='about-content'>
                 <div className='about-image'>
-                    <img src="./Images/Me.jpg" alt="me" />
+                    <img src={img_0} alt="me" />
                     <div className='about-name'>Aarav Gavshinde</div>
                 </div>
                 <div className='about-text'>

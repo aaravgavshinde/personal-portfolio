@@ -1,10 +1,10 @@
-import './App.css';
+import './styles/App.css';
 import { useEffect, useRef, useState } from 'react'
-import './Components/HERO.css'
-import MoreAboutMe from './Components/MoreAboutMe';
+import './styles/HERO.css'
+import MoreAboutMe from './pages/MoreAboutMe';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import AllCompo from './AllCompo';
-import HireMe from './Components/HireMe';
+import Home from './pages/Home';
+import HireMe from './pages/HireMe';
 
 function App() {
   const skills = useRef(null);
@@ -114,7 +114,7 @@ function App() {
       </div>
       
       <Routes>
-        <Route exact path="/" element={<AllCompo skills={skills} projects={projects} certificates={certificates} education={education} resume={resume} contact={contact} />} />
+        <Route exact path="/" element={<Home skills={skills} projects={projects} certificates={certificates} education={education} resume={resume} contact={contact} />} />
         <Route exact path='/aboutme' element={<MoreAboutMe />} />
         <Route exact path='/hireme' element={<HireMe />} />
       </Routes>

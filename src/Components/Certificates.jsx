@@ -1,7 +1,15 @@
 import React from 'react'
-import './Certificates.css'
-import './Common-CSS.css'
-import './Projects.css'
+import '../styles/Certificates.css'
+import '../styles/Common-CSS.css'
+import '../styles/Projects.css'
+import img_0 from '../assets/Images/frontend-certi.jpg';
+import img_1 from '../assets/Images/frontend-loc.jpg';
+import img_2 from '../assets/Images/react-certi.jpg';
+import img_3 from '../assets/Images/react-loc.jpg';
+import img_4 from '../assets/Images/frontend-certi.jpg';
+import img_5 from '../assets/Images/frontend-loc.jpg';
+import img_6 from '../assets/Images/ai-coc.png';
+import img_7 from '../assets/Images/ai-cop.png';
 
 export default function Certificates({componentRef}) {
     return (
@@ -12,11 +20,11 @@ export default function Certificates({componentRef}) {
                 {/* Front End */}
                 <div className='web-dev certificate-box'>
                     <div className='web-dev-1 certi-img'>
-                        <img src="./Images/frontend-certi.jpg" alt="front-end-certificate" />
+                        <img src={img_0} alt="front-end-certificate" />
                     </div>
                     <div className='web-dev-2'>
                         <div className='web-dev-loc loc-img'>
-                            <img src="./Images/frontend-loc.jpg" alt="front-end-loc" />
+                            <img src={img_1} alt="front-end-loc" />
                         </div>
                         <div className='web-dev-details'>
                             <div>
@@ -43,7 +51,7 @@ export default function Certificates({componentRef}) {
                 {/* React.js */}
                 <div className='react certificate-box'>
                     <div className='react-1 certi-img'>
-                        <img src="./Images/react-certi.jpg" alt="react-certificate" />
+                        <img src={img_2} alt="react-certificate" />
                     </div>
                     <div className='react-2'>
                         <div className='react-details'>
@@ -64,7 +72,7 @@ export default function Certificates({componentRef}) {
                             </div>
                         </div>
                         <div className='web-dev-loc loc-img'>
-                            <img src="./Images/react-loc.jpg" alt="react-loc" />
+                            <img src={img_3} alt="react-loc" />
                         </div>
                     </div>
                 </div>
@@ -72,11 +80,11 @@ export default function Certificates({componentRef}) {
                 {/* Back End */}
                 <div className='web-dev certificate-box'>
                     <div className='backend-1 certi-img'>
-                        <img src="./Images/frontend-certi.jpg" alt="back-end-certificate" />
+                        <img src={img_4} alt="back-end-certificate" />
                     </div>
                     <div className='backend-2'>
                         <div className='web-dev-loc loc-img'>
-                            <img src="./Images/frontend-loc.jpg" alt="back-end-loc" />
+                            <img src={img_5} alt="back-end-loc" />
                         </div>
                         <div className='backend-details'>
                             <div>
@@ -115,8 +123,8 @@ export default function Certificates({componentRef}) {
                         </div>
                     </div>
                     <div className='ai-img'>
-                        <div className='certi-img'><img src="./Images/ai-coc.png" alt="" /></div>
-                        <div className='certi-img'><img src="./Images/ai-cop.png" alt="" /></div>
+                        <div className='certi-img'><img src={img_6} alt="" /></div>
+                        <div className='certi-img'><img src={img_7} alt="" /></div>
                     </div>
                 </div>
 

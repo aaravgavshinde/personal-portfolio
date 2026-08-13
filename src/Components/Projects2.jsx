@@ -1,10 +1,14 @@
 import React from 'react'
-import './Projects2.css'
-import './Common-CSS.css'
+import '../styles/Projects2.css'
+import '../styles/Common-CSS.css'
 // GSAP
 import { gsap } from "gsap";
 import {useGSAP} from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import img_0 from '../assets/Images/cozyservice.png';
+import img_1 from '../assets/Images/e-commerce.png';
+import img_2 from '../assets/Images/todo-app.png';
+import img_3 from '../assets/Images/word-app.png';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -43,7 +47,7 @@ export default function Projects2({ componentRef }) {
         {/* CozyService */}
         <div className='project2 project2-1 proj-ani-1'>
           <div>
-            <a href="https://cozyservice.vercel.app/" target='_blank'><img className='proj2-img' src="./Images/cozyservice.png" alt="hello" /></a>
+            <a href="https://cozyservice.vercel.app/" target='_blank'><img className='proj2-img' src={img_0} alt="hello" /></a>
           </div>
           <div className='proj2-content'>
             <div className='proj2-text'>CozyService</div> 
@@ -61,7 +65,7 @@ export default function Projects2({ componentRef }) {
         {/* E-Electronics */}
         <div className='project2 project2-1 proj-ani-2'>
           <div>
-            <a href="https://e-shop-ecommerce.onrender.com/" target='_blank'><img className='proj2-img' src="./Images/e-commerce.png" alt="hello" /></a>
+            <a href="https://e-shop-ecommerce.onrender.com/" target='_blank'><img className='proj2-img' src={img_1} alt="hello" /></a>
           </div>
           <div className='proj2-content'>
             <div className='proj2-text'>E-Electronics</div>
@@ -82,7 +86,7 @@ export default function Projects2({ componentRef }) {
         {/* To-Do List  */}
         <div className='project2 project2-2 proj-ani-1'>
           <div>
-            <a href="https://todoapp-6fxj.onrender.com/" target='_blank'><img className='proj2-img' src="./Images/todo-app.png" alt="hello" /></a>
+            <a href="https://todoapp-6fxj.onrender.com/" target='_blank'><img className='proj2-img' src={img_2} alt="hello" /></a>
           </div>
           <div className='proj2-content'>
             <div className='proj2-text'>To-Do List App</div>
@@ -100,7 +104,7 @@ export default function Projects2({ componentRef }) {
         {/* Word Convertor App  */}
         <div className='project2 project2-3 proj-ani-2'>
           <div>
-            <a href="https://word-converter-react.onrender.com/" target='_blank'><img className='proj2-img' src="./Images/word-app.png" alt="hello" /></a>
+            <a href="https://word-converter-react.onrender.com/" target='_blank'><img className='proj2-img' src={img_3} alt="hello" /></a>
           </div>
           <div className='proj2-content'>
             <div className='proj2-text'>Word Convertor App</div>

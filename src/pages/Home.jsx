@@ -1,16 +1,16 @@
 import React from 'react'
-// import Certificates from './Components/Certificates';
-import Contact from './Components/Contact';
-import Education from './Components/Education';
-import Footer from './Components/Footer';
-import HERO from './Components/HERO'
-// import Projects from './Components/Projects';
-import Resume from './Components/Resume';
-import Skills from './Components/Skills';
-import Projects2 from './Components/Projects2';
-import Certificates2 from './Components/Certificates2';
+// import Certificates from '../components/Certificates';
+import Contact from '../components/Contact';
+import Education from '../components/Education';
+import Footer from '../components/Footer';
+import HERO from '../components/HERO'
+// import Projects from '../components/Projects';
+import Resume from '../components/Resume';
+import Skills from '../components/Skills';
+import Projects2 from '../components/Projects2';
+import Certificates2 from '../components/Certificates2';
 
-export default function AllCompo(props) {
+export default function Home(props) {
     return (
         <div>
             <HERO />

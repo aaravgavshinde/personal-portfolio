@@ -1,6 +1,6 @@
 import React from 'react'
-import './Certificates2.css'
-import './Common-CSS.css'
+import '../styles/Certificates2.css'
+import '../styles/Common-CSS.css'
 
 export default function Certificates2({ componentRef }) {
     return (

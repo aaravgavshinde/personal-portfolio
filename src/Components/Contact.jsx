@@ -1,6 +1,6 @@
 import React from 'react'
-import './Contact.css'
-import './Common-CSS.css'
+import '../styles/Contact.css'
+import '../styles/Common-CSS.css'
 
 export default function Contact({componentRef}) {
     return (

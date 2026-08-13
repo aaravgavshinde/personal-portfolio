@@ -1,5 +1,8 @@
 import React from 'react'
-import './Footer.css'
+import '../styles/Footer.css'
+import img_0 from '../assets/Images/linkedin.jpg';
+import img_1 from '../assets/Images/github.jpg';
+import img_2 from '../assets/Images/instagram.jpg';
 
 export default function Footer() {
     return (
@@ -31,9 +34,9 @@ export default function Footer() {
                 </div>
                 <div className='footer-end-content'>
                     <div className='img-links'>
-                        <a href="https://www.linkedin.com/in/aarav-gavshinde/"><img src="./Images/linkedin.jpg" alt="" /></a>
-                        <a href="https://github.com/aaravgavshinde"><img src="./Images/github.jpg" alt="" /></a>
-                        <a href="https://www.instagram.com/aaravgavshinde/"><img src="./Images/instagram.jpg" alt="" /></a>
+                        <a href="https://www.linkedin.com/in/aarav-gavshinde/"><img src={img_0} alt="" /></a>
+                        <a href="https://github.com/aaravgavshinde"><img src={img_1} alt="" /></a>
+                        <a href="https://www.instagram.com/aaravgavshinde/"><img src={img_2} alt="" /></a>
                     </div>
                     <div className='made-with-love'>Thank you for visiting 💙</div>
                 </div>
