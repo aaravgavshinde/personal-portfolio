@@ -1,19 +1,19 @@
 import React from 'react'
 import '../styles/Resume.css'
 import '../styles/Common-CSS.css'
-import img_0 from '../assets/Images/resume.jpg';
-import resumePdf from '../assets/Assets/Aarav_Resume.pdf';
+import resumePdf from '../assets/Assets/Aarav_Gavshinde.pdf';
 
 export default function Resume({componentRef}) {
     return (
         <div className='resume-main-div'>
             <div className="main-heading" ref={componentRef}>Resume</div>
             <div className="resume-buttons">
-                <button className='resume-open'><a href="https://drive.google.com/file/d/1UId4K8KqraNyersMjpUZnx7JNFpjFx7a/view?usp=sharing" target='_blank'>Open PDF</a></button>
-                <button className='resume-download'><a href={resumePdf} download="AaravGavshinde">Download PDF</a></button>
-            </div>
-            <div className="my-resume">
-                <img src={img_0} alt="sorry :( please see pdf form" />
+                <a href={resumePdf} target='_blank' rel="noreferrer" className='resume-btn resume-open'>
+                    <i className="fa fa-external-link" aria-hidden="true"></i> Open PDF
+                </a>
+                <a href={resumePdf} download="AaravGavshinde_Resume" className='resume-btn resume-download'>
+                    <i className="fa fa-download" aria-hidden="true"></i> Download PDF
+                </a>
             </div>
         </div>
     )

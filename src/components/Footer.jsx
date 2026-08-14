@@ -1,46 +1,57 @@
 import React from 'react'
 import '../styles/Footer.css'
-import img_0 from '../assets/Images/linkedin.jpg';
-import img_1 from '../assets/Images/github.jpg';
-import img_2 from '../assets/Images/instagram.jpg';
+import '../styles/Common-CSS.css'
 
 export default function Footer() {
     return (
-        <div className='footer-main-div'>
+        <footer className='footer-main-div'>
             <div className='footer-main-div-inner'>
-                <div className='hr-div'>
-                    <hr />
-                </div>
+                
                 <div className='footer-content'>
-                    <div className='quick-links-box'>
-                        <div className='quick-link-head'>
-                            Quick Links
+                    <div className='footer-brand'>
+                        <h2>Aarav Gavshinde</h2>
+                        <p>React Developer building modern, responsive, and aesthetic web applications.</p>
+                        <div className='footer-socials'>
+                            <a href="https://www.linkedin.com/in/aarav-gavshinde/" target="_blank" rel="noreferrer" title="LinkedIn">
+                                <i className="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/aaravgavshinde" target="_blank" rel="noreferrer" title="GitHub">
+                                <i className="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/aaravgavshinde/" target="_blank" rel="noreferrer" title="Instagram">
+                                <i className="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="mailto:aaravgavshinde@gmail.com" title="Email">
+                                <i className="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <ul className='quick-links'>
-                            <li className="footer-link"><a href="">About Me</a></li>
-                            <li className="footer-link"><a href="">Skills</a></li>
-                            <li className="footer-link"><a href="">Projects</a></li>
-                            <li className="footer-link"><a href="">Resume</a></li>
-                            <li className="footer-link"><a href="">Contact</a></li>
-                            <li className="footer-link"><a href="">Certificates</a></li>
-                            <li className="footer-link"><a href="">Education</a></li>
-                            {/* <li className="footer-link"><a href="">Extra-Curricular</a></li> */}
+                    </div>
+
+                    <div className='footer-links'>
+                        <h3 className='footer-head'>Quick Links</h3>
+                        <ul>
+                            <li><a href="">About Me</a></li>
+                            <li><a href="">Skills</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">Certificates</a></li>
                         </ul>
                     </div>
-                    <div className='loved-my-work'>
-                        <h3>Loved My Work? Give Me A Chance!</h3>
-                        {/* <a href="/hireme"><button>HIRE ME</button></a> */}
+
+                    <div className='footer-cta'>
+                        <h3 className='footer-head'>Loved My Work?</h3>
+                        <p>Let's build something amazing together. Give me a chance to contribute to your team!</p>
+                        {/* <a href="/hireme" className="footer-hire-btn">Hire Me</a> */}
                     </div>
                 </div>
-                <div className='footer-end-content'>
-                    <div className='img-links'>
-                        <a href="https://www.linkedin.com/in/aarav-gavshinde/"><img src={img_0} alt="" /></a>
-                        <a href="https://github.com/aaravgavshinde"><img src={img_1} alt="" /></a>
-                        <a href="https://www.instagram.com/aaravgavshinde/"><img src={img_2} alt="" /></a>
+
+                <div className='footer-bottom'>
+                    <hr className="footer-divider" />
+                    <div className='made-with-love'>
+                        &copy; {new Date().getFullYear()} Aarav Gavshinde. Made with <i className="fa fa-heart" style={{color: '#AC9EFF'}}></i>
                     </div>
-                    <div className='made-with-love'>Thank you for visiting 💙</div>
                 </div>
+
             </div>
-        </div>
+        </footer>
     )
 }

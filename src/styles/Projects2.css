@@ -1,106 +1,248 @@
 .projects2-main-div {
     margin: 40px auto;
-    width: 50%;
+    width: 65%;
     background-color: #14161B;
-    overflow-x: hidden;
+    padding-bottom: 40px;
 }
 
-.all-projects {
-    color: #F99417;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: right;
-}
-
-.all-projects:hover {
-    text-decoration: underline;
-}
-
-.project2 {
-    margin: 15px;
-}
-
-.projects2-box {
+.projects2-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project2-card {
+    background: linear-gradient(180deg, #25272F 0%, rgba(63, 67, 78, 0.61) 54.58%, rgba(107, 109, 117, 0.24) 87.92%);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+.project2-card:hover {
+    margin-top: -8px;
+    box-shadow: 0 15px 40px rgba(172, 158, 255, 0.15);
+}
+
+.projects2-grid:hover .project2-card:not(:hover) {
+    filter: brightness(60%);
+    transition: filter 0.3s ease;
+}
+
+.proj2-img-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
 }
 
 .proj2-img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transform: scale(1);
-    transition: transform 0.1s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.proj2-img:hover {
-    transform: scale(1.03);
+.project2-card:hover .proj2-img {
+    transform: scale(1.05);
+}
+
+.proj2-img-hover-hint {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(20, 22, 27, 0.8);
+    color: #FFF;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proj2-img-wrapper:hover .proj2-img-hover-hint {
+    opacity: 1;
+}
+
+.proj2-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: transparent;
+}
+
+.proj2-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
 }
 
 .proj2-text {
     color: #FFF;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 1.2px;
-    text-transform: capitalize;
-    margin: 4px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    background: transparent;
 }
 
-.proj2-stack ul {
+.proj2-actions {
+    display: flex;
+    gap: 8px;
+    background: transparent;
+}
+
+.proj-action-btn {
+    background: rgba(172, 158, 255, 0.1);
     color: #AC9EFF;
-    font-size: 12px;
-    /* font-weight: 400; */
-    letter-spacing: 0.8px;
-    text-transform: capitalize;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(172, 158, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    padding: 0;
+}
+
+.proj-action-btn:hover {
+    background: #AC9EFF;
+    color: #14161B;
+}
+
+.proj-action-btn i {
+    font-size: 14px;
+    background: transparent;
+}
+
+.proj2-stack {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+    background: transparent;
 }
 
-.proj2-stack ul li{
-    list-style: none;
-    border: 1px solid #AC9EFF;
-    width: max-content;
-    padding: 2px 6px;
-    margin: 4px;
-    border-radius: 4px;
+.tech-capsule {
+    color: #AC9EFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: rgba(172, 158, 255, 0.1);
+    border: 1px solid rgba(172, 158, 255, 0.3);
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tech-capsule:hover {
+    background: #AC9EFF;
+    color: #14161B;
+}
+
+/* Modal CSS */
+.proj2-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.proj2-modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proj2-modal-img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proj2-modal-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 10px;
+}
+
+.proj2-modal-close:hover {
+    color: #AC9EFF;
 }
 
 /* Making Responsive */
-@media screen and (min-width: 1463px) and (max-width: 1757px) {
-    .projects2-main-div{
-        width: 60%;
+@media screen and (max-width: 1300px) {
+    .projects2-main-div {
+        width: 75%;
     }
 }
 
-@media screen and (min-width: 1253px) and (max-width: 1463px) {
-    .projects2-main-div{
-        width: 70%;
+@media screen and (max-width: 950px) {
+    .projects2-main-div {
+        width: 85%;
+    }
+    .projects2-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
-@media screen and (min-width: 1113px) and (max-width: 1253px) {
-    .projects2-main-div{
-        width: 80%;
+@media screen and (max-width: 768px) {
+    .proj2-modal-close {
+        top: -40px;
+        right: 0px;
     }
 }
 
-@media screen and (min-width: 633px) and (max-width: 1113px) {
-    .projects2-main-div{
-        width: 90%;
+@media screen and (max-width: 600px) {
+    .projects2-main-div {
+        width: 95%;
     }
-}
-
-@media screen and (min-width: 0px) and (max-width: 633px) {
-    .projects2-main-div{
-        width: 90%;
-    }
-    .projects2-box {
-        display: grid;
+    .projects2-grid {
         grid-template-columns: 1fr;
+    }
+    .proj2-text {
+        font-size: 20px;
+    }
+    .tech-capsule {
+        font-size: 12px;
+        padding: 4px 10px;
     }
 }

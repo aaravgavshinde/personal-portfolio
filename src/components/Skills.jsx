@@ -1,84 +1,41 @@
 import React from 'react'
 import '../styles/Skills.css'
 import '../styles/Common-CSS.css'
+import { skillsData } from '../data/skillsData';
 // GSAP
 import { gsap } from "gsap";
-import {useGSAP} from '@gsap/react';
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Skills({componentRef}) {
 
-    useGSAP (() => {
-        gsap.from('.skill-ani-1', {
-            x: -100,
-            duration: 0.5,
-            ease: 'power1.in',
+    useGSAP(() => {
+        gsap.from('.my-skill', {
+            y: 50,
             opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power3.out',
             scrollTrigger: {
                 trigger: ".skills-main-div",
-                start: 'top 90%',
-                toggleActions: "restart complete restart reverse", //play, pause, resume, reverse, restart, reset, complete, none
+                start: 'top 80%',
+                toggleActions: "play none none reverse",
             }
-        })
-        gsap.from('.skill-ani-2', {
-            x: 100,
-            duration: 0.5,
-            opacity: 0,
-            ease: 'power1.in',
-            scrollTrigger: {
-                trigger: ".skills-main-div",
-                start: 'top 90%',
-                toggleActions: "restart complete restart reverse", //play, pause, resume, reverse, restart, reset, complete, none
-            }
-        })
-    })
+        });
+    });
 
     return (
         <div className='skills-main-div'>
             <div className='main-heading' ref={componentRef}>Skills</div>
             <div className='skills-box'>
-                <div className="my-skill skill-ani-1">
-                    <div className="my-skill-head">Front End</div>
-                    <div className="my-skill-content">HTML5, CSS3, JavaScript, React.js, jQuery, DOM</div>
-                </div>
-                <div className="my-skill skill-ani-2">
-                    <div className="my-skill-head">Database</div>
-                    <div className="my-skill-content">MongoDB</div>
-                </div>
-                <div className="my-skill skill-ani-1">
-                    <div className="my-skill-head">Back End</div>
-                    <div className="my-skill-content">Node.js, Express.js</div>
-                </div>
-                <div className="my-skill skill-ani-2">
-                    <div className="my-skill-head">State Management</div>
-                    <div className="my-skill-content">Redux</div>
-                </div>
-                <div className="my-skill skill-ani-1">
-                    <div className="my-skill-head">Additional</div>
-                    <div className="my-skill-content">Bootstrap, Tailwind CSS</div>
-                </div>
-                <div className="my-skill skill-ani-2">
-                    <div className="my-skill-head">Tools and Technologies</div>
-                    <div className="my-skill-content">Git / GitHub, VS Code</div>
-                </div>
-                <div className="my-skill skill-ani-1">
-                    <div className="my-skill-head">AI Tools</div>
-                    <div className="my-skill-content">Prompt Engineering in ChatGPT, etc</div>
-                </div>
-                <div className="my-skill skill-ani-2">
-                    <div className="my-skill-head">Web Design</div>
-                    <div className="my-skill-content">Concepts of Web Design, Figma</div>
-                </div>
-                <div className="my-skill skill-ani-1">
-                    <div className="my-skill-head">API Integration</div>
-                    <div className="my-skill-content">REST APIs</div>
-                </div>
-                <div className="my-skill skill-ani-2">
-                    <div className="my-skill-head">Data Structures</div>
-                    <div className="my-skill-content">C / C++</div>
-                </div>
+                {skillsData.map((skill, index) => (
+                    <div className="my-skill" key={index}>
+                        <div className="my-skill-head">{skill.head}</div>
+                        <div className="my-skill-content">{skill.content}</div>
+                    </div>
+                ))}
             </div>
         </div>
     )

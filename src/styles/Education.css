@@ -1,23 +1,198 @@
-.education-main-div{
+.education-main-div {
     width: 100%;
 }
 
-.education-main-div-inner{
+.education-main-div-inner {
     margin: 60px auto;
     width: 60%;
     background-color: #14161B;
     text-align: center;
+    padding-bottom: 40px;
 }
 
-.my-education{
+.education-timeline {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Vertical Line */
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px; /* Position the line to the left */
+    width: 4px;
+    background: rgba(172, 158, 255, 0.2);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
     width: 100%;
-    filter: contrast(83%);
-    margin-top: 100px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Dot / Icon */
+.timeline-dot {
+    position: absolute;
+    left: 17px; /* Align precisely over the line */
+    top: 20px;
+    background-color: #14161B;
+    border: 4px solid #AC9EFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(172, 158, 255, 0.4);
+    z-index: 2;
+}
+
+.timeline-dot i {
+    font-size: 20px;
+    color: #AC9EFF;
+    background: transparent;
+}
+
+.education-card {
+    background: linear-gradient(180deg, #25272F 0%, rgba(63, 67, 78, 0.61) 54.58%, rgba(107, 109, 117, 0.24) 87.92%);
+    border-radius: 15px;
+    padding: 40px 30px;
+    margin-left: 100px; /* Make room for the line and dot */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: calc(100% - 100px);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(172, 158, 255, 0.15);
+}
+
+.edu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+    width: 100%;
+}
+
+.edu-year {
+    color: #AC9EFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+.edu-degree {
+    color: #FFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+.edu-institute {
+    color: #E2E8F0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background: transparent;
+}
+
+.edu-score {
+    margin-top: 10px;
+    background: rgba(172, 158, 255, 0.1);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid rgba(172, 158, 255, 0.2);
+}
+
+.score-label {
+    color: #E2E8F0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    margin-right: 8px;
+    font-weight: 500;
+    background: transparent;
+}
+
+.score-value {
+    color: #AC9EFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    background: transparent;
 }
 
 /* Making Responsive */
-@media screen and (min-width: 0px) and (max-width: 1350px) {
-    .education-main-div-inner{
+@media screen and (max-width: 1350px) {
+    .education-main-div-inner {
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .education-main-div-inner {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .education-main-div-inner {
+        width: 95%;
+    }
+    
+    .education-timeline::before {
+        left: 20px; /* Move line closer to edge */
+    }
+    
+    .timeline-dot {
+        left: 0;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .timeline-dot i {
+        font-size: 16px;
+    }
+    
+    .education-card {
+        margin-left: 60px; /* Adjust margin */
+        padding: 30px 20px;
+        width: calc(100% - 60px);
+    }
+    
+    .edu-degree {
+        font-size: 22px;
+    }
+    .edu-institute {
+        font-size: 16px;
     }
 }

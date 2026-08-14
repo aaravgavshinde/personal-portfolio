@@ -2,88 +2,86 @@
   font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Outfit;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #14161B;
+  color: #E2E8F0;
+  overflow-x: hidden;
+}
+
+.app-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar container */
 .app-bg .main-nav {
-  margin: 40px auto;
-  width: 50%;
+  width: auto;
   margin-top: 0;
   padding-top: 20px;
 }
 
 .main-nav {
   position: fixed;
-  top: 30px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: transparent;
   z-index: 99;
 }
 
+/* Pill shaped modern nav */
 .nav-link {
-  background-color: rgba(173, 158, 255, 0.436);
-  padding: 10px 20px;
-  border-radius: 10px;
+  background-color: rgba(20, 22, 27, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.nav-link ul{
-  background-color: transparent;
-}
-
-.nav-link ul li a{
-  background-color: rgba(173, 158, 255, 0.436);
-}
-
-/* .nav-link */
-.nav-link {
-  display: grid;
+.nav-link:hover {
+  background-color: rgba(30, 32, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-link ul {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 25px;
+  background-color: transparent;
 }
 
 .nav-link ul li {
   list-style: none;
-  color: #FFF;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.75px;
-  text-transform: capitalize;
-  margin: 5px auto;
 }
 
 .nav-link ul li a {
   text-decoration: none;
-  color: white;
-  margin: auto;
+  color: #E2E8F0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   cursor: pointer;
+  background-color: transparent;
+  transition: color 0.3s ease;
 }
 
 .nav-link ul li a:hover {
-  color: rgba(172, 158, 255, 0.87);
+  color: #AC9EFF;
 }
 
+/* Mobile Nav overrides */
 .hamburger-button {
   display: none;
   background: transparent;
 }
-
-/* .link-active {
-    background: linear-gradient(to right, #ffffff, #966c6c, #9a0c0c);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-emphasis-color: transparent;
-    background-size: 600% auto;
-    animation: Animation-1 1.3s ease-in-out infinite alternate;
-    text-shadow: 0.1px 0.1px 20px #70f8ff;
-} */
 
 /* Button to Top */
 .button-to-top {
@@ -107,101 +105,113 @@
 .button-to-top button i {
   background: rgba(169, 169, 169, 0.43);
   border-radius: 50%;
-  padding: 4px;
+  padding: 8px;
+  transition: background 0.3s ease;
+}
+
+.button-to-top button i:hover {
+  background: rgba(172, 158, 255, 0.7);
 }
 
 .hide-nav {
   display: none;
 }
 
-
-/* Making Responsive */
-@media screen and (min-width: 1480px) and (max-width: 1750px) {
-  .app-bg .main-nav {
-    width: 60%;
-  }
+.sidebar-overlay {
+  display: none;
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1480px) {
-  .app-bg .main-nav {
-    width: 70%;
+/* Responsive */
+@media screen and (max-width: 1040px) {
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 98;
   }
-}
 
-@media screen and (min-width: 1040px) and (max-width: 1280px) {
-  .app-bg .main-nav {
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 1040px) {
-
-  /* Mobile View  */
+  /* Mobile View Sidebar */
   .nav-link {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(20, 22, 27, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    padding: 80px 20px 20px 30px;
+    z-index: 99;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
   }
 
-  .nav-link ul li {
-    margin: 0px 20px;
+  .nav-link ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .mobile-nav-link {
+    transform: translateX(0);
   }
 
   .main-nav {
-    height: 0rem;
-  }
-
-  .mobile-nav-link {
-    display: block;
-    position: relative;
-    z-index: 99;
-
-  }
-
-  .mobile-nav-link {
-    background-color: rgba(8, 24, 61, 0.816);
-    height: 20rem;
-    align-items: center;
-    padding-left: 0px;
-    transition: all 0.2s linear;
-    transform-origin: top;
-    box-shadow: rgba(32, 32, 85, 0.611) 0px 50px 100px -20px,
-      rgba(43, 39, 90, 0.3) 0px 30px 60px -30px;
-    margin-top: 30px;
-    position: fixed;
-    top: 30px;
-    left: 10px;
-  }
-
-  .mobile-nav-link ul {
-    height: 20rem;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .mobile-nav-link ul li {
-    list-style: none;
-  }
-
-  .mobile-menu-link ul li:first-child {
-    transition-delay: 0.2s;
-  }
-
-  .mobile-nav-link li a {
-    text-decoration: none;
-    color: white;
+    position: static;
+    transform: none;
+    left: auto;
+    width: 0;
+    height: 0;
   }
 
   .hamburger-button {
     display: block;
     position: fixed;
-    z-index: 89;
+    z-index: 100;
     top: 20px;
-    left: 20px;
+    right: 20px;
+    left: auto;
+    background-color: rgba(20, 22, 27, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
   .hamburger-button i {
-    color: rgb(197, 187, 253);
-    font-size: 30px;
+    color: #AC9EFF;
+    font-size: 24px;
   }
+}
+
+/* Global Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14161B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(172, 158, 255, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(172, 158, 255, 0.7);
 }

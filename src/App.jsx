@@ -15,60 +15,29 @@ function App() {
   const education = useRef(null);
   // const extracurricular = useRef(null);
 
-  const scrollToRef = (ref) => {
-    window.scrollTo({
-      top: ref.current.offsetTop,
-      behavior: 'smooth',
-    });
-  };
-
-  const compoA = (e) => {
+  const handleScrollTo = (e, ref) => {
     e.preventDefault();
-    scrollToRef(skills);
-    setShowMediaIcons(!showMediaIcons);
+    const yOffset = -80; // Gap above the main heading
+    const element = ref.current;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    setShowMediaIcons(false);
   };
-  const compoB = (e) => {
-    e.preventDefault();
-    scrollToRef(projects);
-    setShowMediaIcons(!showMediaIcons);
-  };
-  const compoC = (e) => {
-    e.preventDefault();
-    scrollToRef(resume);
-    setShowMediaIcons(!showMediaIcons);
-  };
-  const compoD = (e) => {
-    e.preventDefault();
-    scrollToRef(contact);
-    setShowMediaIcons(!showMediaIcons);
-  };
-  const compoE = (e) => {
-    e.preventDefault();
-    scrollToRef(certificates);
-    setShowMediaIcons(!showMediaIcons);
-  };
-  const compoF = (e) => {
-    e.preventDefault();
-    scrollToRef(education);
-    setShowMediaIcons(!showMediaIcons);
-  };
-  // const compoG = () => {
-  //   scrollToRef(extracurricular);
-  // };
 
   const [showMediaIcons, setShowMediaIcons] = useState(false);
 
   const [showUpArrow, setShowUpArrow] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (window.scrollY > 400) {
         setShowUpArrow(true);
-      }
-      else {
+      } else {
         setShowUpArrow(false);
       }
-    })
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
@@ -91,26 +60,28 @@ function App() {
     <div className='app-bg'>
 
       {!hideNavbar && <div className="hamburger-button">
-        <a href="#" onClick={toggleMediaIcons}>
+        <a href="#" onClick={toggleMediaIcons} aria-label="Toggle Navigation">
           <i className="fa fa-bars" aria-hidden="true"></i>
         </a>
       </div>}
+      
+      {showMediaIcons && <div className="sidebar-overlay" onClick={() => setShowMediaIcons(false)}></div>}
       {!hideNavbar && <nav className='main-nav'>
         <div className={showMediaIcons ? "nav-link mobile-nav-link" : "nav-link"} >
           <ul>
             <li><a href='/aboutme'>More About Me</a></li>
-            <li><a onClick={compoA}>Skills</a></li>
-            <li><a onClick={compoB}>Projects</a></li>
-            <li><a onClick={compoC}>Resume</a></li>
-            <li><a onClick={compoD}>Contact</a></li>
-            <li><a onClick={compoE}>Certificates</a></li>
-            <li><a onClick={compoF}>Education</a></li>
+            <li><a href="#" onClick={(e) => handleScrollTo(e, skills)}>Skills</a></li>
+            <li><a href="#" onClick={(e) => handleScrollTo(e, projects)}>Projects</a></li>
+            <li><a href="#" onClick={(e) => handleScrollTo(e, resume)}>Resume</a></li>
+            <li><a href="#" onClick={(e) => handleScrollTo(e, contact)}>Contact</a></li>
+            <li><a href="#" onClick={(e) => handleScrollTo(e, certificates)}>Certificates</a></li>
+            <li><a href="#" onClick={(e) => handleScrollTo(e, education)}>Education</a></li>
             {/* <li><a onClick={compoG}>Extra-Curricular</a></li> */}
           </ul>
         </div>
       </nav >}
       <div className='button-to-top'>
-        <button>{showUpArrow && <i onClick={scrollToTop} class="fa fa-arrow-up" aria-hidden="true"></i>}</button>
+        <button aria-label="Scroll to top">{showUpArrow && <i onClick={scrollToTop} className="fa fa-arrow-up" aria-hidden="true"></i>}</button>
       </div>
       
       <Routes>

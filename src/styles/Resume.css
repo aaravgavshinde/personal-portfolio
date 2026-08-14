@@ -1,105 +1,81 @@
 .resume-main-div {
     margin: 40px auto;
-    width: 50%;
+    width: 60%;
     background-color: #14161B;
+    padding-bottom: 50px;
 }
 
 .resume-buttons {
-    text-align: center;
-    margin: 10px;
-    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
 }
 
-.resume-buttons a{
+.resume-btn {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    background: inherit;
-    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.resume-btn i {
+    background: transparent;
 }
 
 .resume-open {
-    color: #14161B;
-    font-family: Outfit;
     background-color: #AC9EFF;
-    padding: 5px 15px;
-    margin: 5px;
-    margin-right: 10px;
-    border: 1px solid #AC9EFF;
-    border-radius: 30px;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
+    color: #14161B;
+    border: 2px solid #AC9EFF;
+}
+
+.resume-open:hover {
+    background-color: transparent;
+    color: #AC9EFF;
+    box-shadow: 0 5px 20px rgba(172, 158, 255, 0.3);
+    transform: translateY(-3px);
 }
 
 .resume-download {
+    background-color: transparent;
     color: #AC9EFF;
-    font-family: Outfit;
-    background-color: #14161B;
-    border: 1px solid #AC9EFF;
-    padding: 4px 15px;
-    margin: 5px;
-    margin-left: 10px;
-    border-radius: 30px;
-    font-size: 15px;
-    cursor: pointer;
+    border: 2px solid #AC9EFF;
 }
 
-.my-resume {
-    display: flex;
-    justify-content: center;
-}
-
-.my-resume img {
-    width: 900px;
-    height: auto;
-    margin: 10px;
-    border-radius: 8px;
+.resume-download:hover {
+    background-color: #AC9EFF;
+    color: #14161B;
+    box-shadow: 0 5px 20px rgba(172, 158, 255, 0.3);
+    transform: translateY(-3px);
 }
 
 /* Making Responsive */
-@media screen and (min-width: 966px) and (max-width: 1347px) {
-    .my-resume img{
-        width: 800px;
-        height: auto;
+@media screen and (max-width: 768px) {
+    .resume-main-div {
+        width: 80%;
     }
 }
 
-@media screen and (min-width: 840px) and (max-width: 966px) {
-    .my-resume img{
-        width: 700px;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 675px) and (max-width: 840px) {
-    .my-resume img{
-        width: 600px;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 521px) and (max-width: 675px) {
-    .my-resume img{
-        display: none;
-    }
-    .resume-open{
-        font-size: 12px;
-    }
-    .resume-download{
-        font-size: 12px;
-    }
-}
-
-@media screen and (min-width: 0px) and (max-width: 521px) {
-    .my-resume img{
-        display: none;
-    }
-    .resume-open{
-        font-size: 12px;
-    }
-    .resume-download{
-        font-size: 12px;
-    }
-    .resume-main-div{
+@media screen and (max-width: 521px) {
+    .resume-main-div {
         width: 90%;
+    }
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .resume-btn {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
     }
 }
